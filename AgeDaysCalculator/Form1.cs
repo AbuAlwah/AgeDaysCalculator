@@ -68,6 +68,30 @@ namespace AgeDaysCalculator
 
             // Display remaining days to next birthday
             lblNextBirthdayDays.Text = daysToNextBirthday.ToString();
+
+            // 3. Calculate total days and total hours lived
+            TimeSpan totalDifference = today - birthDate;
+            double totalDays = totalDifference.TotalDays;
+            double totalHours = totalDifference.TotalHours;
+
+            // Display total values with number formatting (e.g., 8,760)
+            lblTotalDays.Text = string.Format("{0:N0}", totalDays);
+            lblTotalHours.Text = string.Format("{0:N0}", totalHours);
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // Reset date picker to today
+            dtpBirthDate.Value = DateTime.Today;
+
+            // Reset all labels to initial values
+            lblYears.Text = "0";
+            lblMonths.Text = "0";
+            lblDays.Text = "0";
+            lblNextBirthdayDays.Text = "0";
+            lblTotalDays.Text = "0";
+            lblTotalHours.Text = "0";
         }
 
     }
