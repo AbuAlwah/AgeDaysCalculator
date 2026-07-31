@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
             this.panelHeader = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,9 +39,9 @@
             this.panelTotalDays = new Guna.UI2.WinForms.Guna2Panel();
             this.panelNextBirthday = new Guna.UI2.WinForms.Guna2Panel();
             this.panelExactAge = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDays = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblMonths = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblYears = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,13 +52,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblNextBirthday = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lblTotalDays = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTotalHours = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblNextBirthdayDays = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTotalDys = new System.Windows.Forms.Label();
+            this.lblTotalDays = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTotalHrs = new System.Windows.Forms.Label();
+            this.lblTotalHours = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
+            dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,8 +137,8 @@
             // panelTotalHours
             // 
             this.panelTotalHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelTotalHours.Controls.Add(this.guna2HtmlLabel6);
             this.panelTotalHours.Controls.Add(this.lblTotalHours);
+            this.panelTotalHours.Controls.Add(this.lblTotalHrs);
             this.panelTotalHours.Location = new System.Drawing.Point(426, 262);
             this.panelTotalHours.Name = "panelTotalHours";
             this.panelTotalHours.Size = new System.Drawing.Size(216, 100);
@@ -146,8 +147,8 @@
             // panelTotalDays
             // 
             this.panelTotalDays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelTotalDays.Controls.Add(this.guna2HtmlLabel5);
             this.panelTotalDays.Controls.Add(this.lblTotalDays);
+            this.panelTotalDays.Controls.Add(this.lblTotalDys);
             this.panelTotalDays.Location = new System.Drawing.Point(183, 262);
             this.panelTotalDays.Name = "panelTotalDays";
             this.panelTotalDays.Size = new System.Drawing.Size(214, 100);
@@ -156,7 +157,7 @@
             // panelNextBirthday
             // 
             this.panelNextBirthday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelNextBirthday.Controls.Add(this.guna2HtmlLabel4);
+            this.panelNextBirthday.Controls.Add(this.lblNextBirthdayDays);
             this.panelNextBirthday.Controls.Add(this.label9);
             this.panelNextBirthday.Controls.Add(this.lblNextBirthday);
             this.panelNextBirthday.Location = new System.Drawing.Point(183, 141);
@@ -167,9 +168,9 @@
             // panelExactAge
             // 
             this.panelExactAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panelExactAge.Controls.Add(this.guna2HtmlLabel3);
-            this.panelExactAge.Controls.Add(this.guna2HtmlLabel2);
-            this.panelExactAge.Controls.Add(this.guna2HtmlLabel1);
+            this.panelExactAge.Controls.Add(this.lblDays);
+            this.panelExactAge.Controls.Add(this.lblMonths);
+            this.panelExactAge.Controls.Add(this.lblYears);
             this.panelExactAge.Controls.Add(this.label7);
             this.panelExactAge.Controls.Add(this.label6);
             this.panelExactAge.Controls.Add(this.label5);
@@ -179,38 +180,38 @@
             this.panelExactAge.Size = new System.Drawing.Size(459, 100);
             this.panelExactAge.TabIndex = 0;
             // 
-            // guna2HtmlLabel3
+            // lblDays
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(184, 45);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(18, 39);
-            this.guna2HtmlLabel3.TabIndex = 9;
-            this.guna2HtmlLabel3.Text = "1";
+            this.lblDays.BackColor = System.Drawing.Color.Transparent;
+            this.lblDays.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDays.ForeColor = System.Drawing.Color.White;
+            this.lblDays.Location = new System.Drawing.Point(184, 45);
+            this.lblDays.Name = "lblDays";
+            this.lblDays.Size = new System.Drawing.Size(18, 39);
+            this.lblDays.TabIndex = 9;
+            this.lblDays.Text = "1";
             // 
-            // guna2HtmlLabel2
+            // lblMonths
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(105, 45);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(18, 39);
-            this.guna2HtmlLabel2.TabIndex = 8;
-            this.guna2HtmlLabel2.Text = "1";
+            this.lblMonths.BackColor = System.Drawing.Color.Transparent;
+            this.lblMonths.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonths.ForeColor = System.Drawing.Color.White;
+            this.lblMonths.Location = new System.Drawing.Point(105, 45);
+            this.lblMonths.Name = "lblMonths";
+            this.lblMonths.Size = new System.Drawing.Size(18, 39);
+            this.lblMonths.TabIndex = 8;
+            this.lblMonths.Text = "1";
             // 
-            // guna2HtmlLabel1
+            // lblYears
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(38, 45);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(18, 39);
-            this.guna2HtmlLabel1.TabIndex = 7;
-            this.guna2HtmlLabel1.Text = "1";
+            this.lblYears.BackColor = System.Drawing.Color.Transparent;
+            this.lblYears.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYears.ForeColor = System.Drawing.Color.White;
+            this.lblYears.Location = new System.Drawing.Point(38, 45);
+            this.lblYears.Name = "lblYears";
+            this.lblYears.Size = new System.Drawing.Size(18, 39);
+            this.lblYears.TabIndex = 7;
+            this.lblYears.Text = "1";
             // 
             // label7
             // 
@@ -272,7 +273,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel1.Controls.Add(this.dtpBirthDate);
+            this.panel1.Controls.Add(dtpBirthDate);
             this.panel1.Controls.Add(this.btnCalculate);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(183, 16);
@@ -332,76 +333,77 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "days to go";
             // 
-            // guna2HtmlLabel4
+            // lblNextBirthdayDays
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Lime;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(35, 44);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(51, 39);
-            this.guna2HtmlLabel4.TabIndex = 8;
-            this.guna2HtmlLabel4.Text = "365";
+            this.lblNextBirthdayDays.BackColor = System.Drawing.Color.Transparent;
+            this.lblNextBirthdayDays.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextBirthdayDays.ForeColor = System.Drawing.Color.Lime;
+            this.lblNextBirthdayDays.Location = new System.Drawing.Point(35, 44);
+            this.lblNextBirthdayDays.Name = "lblNextBirthdayDays";
+            this.lblNextBirthdayDays.Size = new System.Drawing.Size(51, 39);
+            this.lblNextBirthdayDays.TabIndex = 8;
+            this.lblNextBirthdayDays.Text = "365";
             // 
             // dtpBirthDate
             // 
-            this.dtpBirthDate.Checked = true;
-            this.dtpBirthDate.FillColor = System.Drawing.Color.White;
-            this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthDate.Location = new System.Drawing.Point(42, 72);
-            this.dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(370, 36);
-            this.dtpBirthDate.TabIndex = 0;
-            this.dtpBirthDate.Value = new System.DateTime(2026, 7, 31, 19, 39, 49, 643);
+            dtpBirthDate.BorderRadius = 10;
+            dtpBirthDate.Checked = true;
+            dtpBirthDate.FillColor = System.Drawing.Color.White;
+            dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtpBirthDate.Location = new System.Drawing.Point(42, 72);
+            dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new System.Drawing.Size(370, 36);
+            dtpBirthDate.TabIndex = 0;
+            dtpBirthDate.Value = new System.DateTime(2026, 7, 31, 19, 39, 49, 643);
+            // 
+            // lblTotalDys
+            // 
+            this.lblTotalDys.AutoSize = true;
+            this.lblTotalDys.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalDys.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDys.ForeColor = System.Drawing.Color.Gray;
+            this.lblTotalDys.Location = new System.Drawing.Point(28, 18);
+            this.lblTotalDys.Name = "lblTotalDys";
+            this.lblTotalDys.Size = new System.Drawing.Size(96, 20);
+            this.lblTotalDys.TabIndex = 5;
+            this.lblTotalDys.Text = "TOTAL DAYS";
             // 
             // lblTotalDays
             // 
-            this.lblTotalDays.AutoSize = true;
             this.lblTotalDays.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalDays.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDays.ForeColor = System.Drawing.Color.Gray;
-            this.lblTotalDays.Location = new System.Drawing.Point(28, 18);
+            this.lblTotalDays.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDays.ForeColor = System.Drawing.Color.White;
+            this.lblTotalDays.Location = new System.Drawing.Point(33, 45);
             this.lblTotalDays.Name = "lblTotalDays";
-            this.lblTotalDays.Size = new System.Drawing.Size(96, 20);
-            this.lblTotalDays.TabIndex = 5;
-            this.lblTotalDays.Text = "TOTAL DAYS";
+            this.lblTotalDays.Size = new System.Drawing.Size(42, 33);
+            this.lblTotalDays.TabIndex = 8;
+            this.lblTotalDays.Text = "365";
             // 
-            // guna2HtmlLabel5
+            // lblTotalHrs
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(33, 45);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(42, 33);
-            this.guna2HtmlLabel5.TabIndex = 8;
-            this.guna2HtmlLabel5.Text = "365";
+            this.lblTotalHrs.AutoSize = true;
+            this.lblTotalHrs.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalHrs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalHrs.ForeColor = System.Drawing.Color.Gray;
+            this.lblTotalHrs.Location = new System.Drawing.Point(30, 18);
+            this.lblTotalHrs.Name = "lblTotalHrs";
+            this.lblTotalHrs.Size = new System.Drawing.Size(109, 20);
+            this.lblTotalHrs.TabIndex = 6;
+            this.lblTotalHrs.Text = "TOTAL HOURS";
             // 
             // lblTotalHours
             // 
-            this.lblTotalHours.AutoSize = true;
             this.lblTotalHours.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotalHours.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalHours.ForeColor = System.Drawing.Color.Gray;
-            this.lblTotalHours.Location = new System.Drawing.Point(30, 18);
+            this.lblTotalHours.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalHours.ForeColor = System.Drawing.Color.White;
+            this.lblTotalHours.Location = new System.Drawing.Point(34, 45);
             this.lblTotalHours.Name = "lblTotalHours";
-            this.lblTotalHours.Size = new System.Drawing.Size(109, 20);
-            this.lblTotalHours.TabIndex = 6;
-            this.lblTotalHours.Text = "TOTAL HOURS";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(34, 45);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(61, 33);
-            this.guna2HtmlLabel6.TabIndex = 9;
-            this.guna2HtmlLabel6.Text = "8,760";
+            this.lblTotalHours.Size = new System.Drawing.Size(61, 33);
+            this.lblTotalHours.TabIndex = 9;
+            this.lblTotalHours.Text = "8,760";
             // 
             // btnClear
             // 
@@ -475,17 +477,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDays;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMonths;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblYears;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNextBirthdayDays;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblNextBirthday;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private System.Windows.Forms.Label lblTotalHours;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private System.Windows.Forms.Label lblTotalDays;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalHours;
+        private System.Windows.Forms.Label lblTotalHrs;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalDays;
+        private System.Windows.Forms.Label lblTotalDys;
         private Guna.UI2.WinForms.Guna2Button btnClear;
     }
 }
