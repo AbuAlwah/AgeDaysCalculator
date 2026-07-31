@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 
 namespace AgeDaysCalculator
 {
@@ -20,7 +21,7 @@ namespace AgeDaysCalculator
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             // Get the selected birth date and current system date
-            DateTime birthDate = dtpBirthDate.Value.Date;
+            DateTime birthDate = guna2DateTimePicker1.Value.Date;
             DateTime today = DateTime.Today;
 
             // Validate that the birth date is not set in the future
@@ -83,7 +84,7 @@ namespace AgeDaysCalculator
         private void btnClear_Click(object sender, EventArgs e)
         {
             // Reset date picker to today
-            dtpBirthDate.Value = DateTime.Today;
+            guna2DateTimePicker1.Value = DateTime.Today;
 
             // Reset all labels to initial values
             lblYears.Text = "0";
@@ -94,5 +95,9 @@ namespace AgeDaysCalculator
             lblTotalHours.Text = "0";
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
