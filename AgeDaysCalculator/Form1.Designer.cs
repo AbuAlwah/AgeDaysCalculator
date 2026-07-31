@@ -350,7 +350,7 @@
             dtpBirthDate.Checked = true;
             dtpBirthDate.FillColor = System.Drawing.Color.White;
             dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             dtpBirthDate.Location = new System.Drawing.Point(42, 72);
             dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);

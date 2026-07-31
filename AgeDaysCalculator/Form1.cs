@@ -30,6 +30,30 @@ namespace AgeDaysCalculator
                 return;
             }
 
+            // 1. Calculate exact age (Years, Months, Days)
+            int years = today.Year - birthDate.Year;
+            int months = today.Month - birthDate.Month;
+            int days = today.Day - birthDate.Day;
+
+            // Adjust days if the current day of the month is less than the birth day
+            if (days < 0)
+            {
+                months--;
+                DateTime previousMonth = today.AddMonths(-1);
+                days += DateTime.DaysInMonth(previousMonth.Year, previousMonth.Month);
+            }
+
+            // Adjust months if the current month is less than the birth month
+            if (months < 0)
+            {
+                years--;
+                months += 12;
+            }
+
+            // Display exact age values in labels
+            lblYears.Text = years.ToString();
+            lblMonths.Text = months.ToString();
+            lblDays.Text = days.ToString();
         }
 
     }
