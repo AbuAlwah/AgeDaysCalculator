@@ -54,6 +54,20 @@ namespace AgeDaysCalculator
             lblYears.Text = years.ToString();
             lblMonths.Text = months.ToString();
             lblDays.Text = days.ToString();
+
+            // 2. Calculate remaining days to the next birthday
+            DateTime nextBirthday = new DateTime(today.Year, birthDate.Month, birthDate.Day);
+
+            // If the birthday has already passed this year, set it to next year
+            if (nextBirthday < today)
+            {
+                nextBirthday = nextBirthday.AddYears(1);
+            }
+
+            int daysToNextBirthday = (nextBirthday - today).Days;
+
+            // Display remaining days to next birthday
+            lblNextBirthdayDays.Text = daysToNextBirthday.ToString();
         }
 
     }
