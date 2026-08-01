@@ -16,7 +16,7 @@ A clean, modern, and precise desktop application built with **C# WinForms** and 
 
 | 🚀 Application Preview |
 | :------------------------------------------------------------------------------------------------------------------------------------------: |
- (Screenshot 2026-07-31 220455.png) 
+| <img src="https://github.com/AbuAlwah/AgeDaysCalculator/blob/main/Screenshot%202026-07-31%20220455.png?raw=true" width="450"/> |
 
 ---
 
